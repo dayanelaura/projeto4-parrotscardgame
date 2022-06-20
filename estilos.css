@@ -1,0 +1,43 @@
+body{
+    background: #EEF9BF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nometop {
+    margin-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    color: #75B79E;
+    display: flex;
+    flex-wrap: wrap; 
+    }
+
+.boxcartas{
+    margin-top: 47px;
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cartas{
+    width: 117px;
+    height: 146px;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    margin-right: 34px;
+    margin-bottom: 34px;
+}
+.cartas img {
+    margin-top: 24px;
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+}
+.esconderelem{
+    display: none;
+}
