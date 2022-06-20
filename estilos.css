@@ -12,6 +12,10 @@ body{
     color: #75B79E;
     display: flex;
     flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
     }
 
 .boxcartas{
