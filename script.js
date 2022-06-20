@@ -34,26 +34,19 @@ function qtdCartas(){
 qtdCartas();
 
 let cont = 0;
-// let contBloqueio = false;
 
-// function selectDelay{
-//     if(contBloqueio == true)
-//         setTimeout(() => selecionar(carta_davez), 1000);
+function selecionar(carta_davez) {
+    let facedown = carta_davez.querySelector(".fig_frente");
+    facedown.classList.add("esconderelem");
+    
+    let faceup = carta_davez.querySelector(".fig_verso");
+    faceup.classList.remove("esconderelem");
 
-    function selecionar(carta_davez) {
-        let facedown = carta_davez.querySelector(".fig_frente");
-        facedown.classList.add("esconderelem");
-        
-        let faceup = carta_davez.querySelector(".fig_verso");
-        faceup.classList.remove("esconderelem");
+    cont++;
+    Comparador(carta_davez);
 
-        cont++;
-        Comparador(carta_davez);
-        
-        carta_davez.setAttribute("onclick", "");
-    }
-//     contBloqueio = false;
-// }
+    carta_davez.setAttribute("onclick", "");
+}
 
 let carta_anterior = null;   
 let cartasIguais = 0;
@@ -67,7 +60,6 @@ function Comparador(carta_davez) {
         if(cartasIguais === quantid/2)
             setTimeout(() => alert(`Parabéns! Você ganhou em ${cont} jogadas!`), 300);      
     }else{
-        // contBloqueio = true;
         cartasDiferentes(carta_anterior, carta_davez);
         carta_anterior = null;
     }
@@ -93,5 +85,4 @@ function cartasDiferentes(carta_anterior, carta_davez){
 
         carta_davez.setAttribute( "onclick", "selecionar(this,'cartas');" ) ;
     }
-
 }
